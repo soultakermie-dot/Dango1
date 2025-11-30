@@ -1,4 +1,4 @@
-# Classroom Application
+# Classroom Application - dango
 
 A monorepo application for connecting students with teachers. Built with Express.js backend and React Native (Expo) frontend.
 
