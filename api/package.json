@@ -1,0 +1,31 @@
+{
+  "name": "classroom-api",
+  "version": "1.0.0",
+  "description": "Classroom API backend",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "db:create": "createdb -U postgres classroom 2>/dev/null || psql -U postgres -c 'CREATE DATABASE classroom;' 2>/dev/null || echo 'Database already exists or check your PostgreSQL connection'",
+    "migrate": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "knex": "^2.5.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
+
